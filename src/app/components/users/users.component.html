@@ -1,0 +1,11 @@
+<button (click)="addNewUser()">Add User</button>
+<button (click)="laodUsers()">Load users</button>
+
+<ul>
+  @for (user of users; track user.id) {
+  <li>
+    {{ user.id }} - {{ user.name }} - {{ user.age }} -------
+    <button (click)="removeUser(user.id)">delete</button>
+  </li>
+  }
+</ul>
